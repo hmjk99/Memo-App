@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+       <h1> Create New Memo</h1>
+       <a href='/budgets'><button class="button-primary">Home</button></a>
+    </div>
+    <form action="/memo" method="POST">
+        <label for="date">Date:</label>
+        <input type="text" name="date" id="date" placeholder="Ex: 3/10"/><br/>
+        <label for="name">Date:</label>
+        <input type="text" name="title" id="name" placeholder="Title of Memo"/><br/>
+        <label for="text">Content:</label>
+        <textarea id="text" name="text" rows="10" cols="0" placeholder="Enter text:"></textarea>
+        <input class="button-primary" type="submit" value="Create Item"/>
+    </form>
+</body>
+</html>
