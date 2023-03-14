@@ -1,9 +1,100 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
 .img{
     width: 100%;
-    height: 30%;
+    height: 38%;
 }
 img{
     width:100%;
     height:100%;
     object-fit: cover;
+}
+a{
+    text-decoration: none;
+    color: black
+}
+.modal{
+    display: none
+}
+.show-modal{
+    display:block
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box, #add{
+    border: 4px solid rgb(237, 237, 128);
+    border-radius: 15%;
+    margin: 2rem;
+    width: 16rem;
+    height: 16rem;
+    background-color: rgb(203, 237, 203);
+}
+.box-header{
+    margin:0.8rem;
+    display: flex;
+    justify-content: flex-end;
+    height: 2rem;
+    border-bottom: 1px solid white;
+}
+.box-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#add i{
+    font-size: 3rem;
+    color: rgb(18, 120, 151)
+}
+#add a{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 2px dashed white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#main-title{
+    font-family: 'Rampart One', cursive;
+    font-size: 5rem;
+    margin: 0;
+    position: absolute;
+    top: 22%
+}
+#home-title{
+    font-family: 'Lobster Two', cursive;
+    font-size: 4rem;
+}
+#date{
+    font-size: 1.35rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: white
+}
+#title{
+    color: rgb(18, 120, 151);
+    font-size: 1.6rem;
+    margin-bottom: 1.3rem;
+    font-weight: bold;
+}
+.index-icon{
+    font-size: 1.3rem;
+    margin-right: 0.7rem;
+    color:white
 }
