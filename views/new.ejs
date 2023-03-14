@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
 <body>
     <div>
        <h1> Create New Memo</h1>
-       <a href='/budgets'><button class="button-primary">Home</button></a>
+       <a href='/memo'><button class="button-primary"><i class='bx bx-home'></i></button></a>
     </div>
     <form action="/memo" method="POST">
         <label for="date">Date:</label>
-        <input type="text" name="date" id="date" placeholder="Ex: 3/10"/><br/>
+        <input type="text" name="date" id="date" placeholder="Ex: 3/10 (Fri)"/><br/>
         <label for="name">Date:</label>
         <input type="text" name="title" id="name" placeholder="Title of Memo"/><br/>
         <label for="text">Content:</label>
@@ -23,3 +24,4 @@
     </form>
 </body>
 </html>
+

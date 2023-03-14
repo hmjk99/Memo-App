@@ -3,11 +3,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
 <body>
     <h1><%=data.date%></h1>
+    <div class="buttons">
+        <a href='/memo'><button class="button-primary"><i class='bx bx-home'></i></button></a>
+        <a href='/memo/<%=data.id%>'><button><i class='bx bx-edit-alt'></i></button></a>
+        <a href='/memo/new'><button><i class='bx bx-plus-circle'></i></button></a>
+    </div>
     <h1><%=data.title%></h1>
     <p><%=data.text%></p>
 </body>

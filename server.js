@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended: true}))
 
 // ============== index ================
 app.get('/memo', (req, res)=>{
-    Memo.find({}).then((foundMemo)=>{
+    Memo.find({}).sort({date:1}).then((foundMemo)=>{
         res.render('index.ejs', {data: foundMemo})
     })
 })

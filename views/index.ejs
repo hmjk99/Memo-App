@@ -3,26 +3,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="img">
+        <img src="/src/Screenshot 2023-03-14 at 12.24.57 AM.png"/>
+    </div>
     <h1>Memo Pad</h1>
+    <h1>Home</h1>
+    <a href="/memo/new"><i class='bx bx-plus' ></i></a>
     <div class="">
         <table>
-            <tr>
-                <td>Date</td>
-                <td>Title</td>
-            </tr>
             <% for (let i=0; i<data.length; i++){ %>
                 <tr>
                     <td><%=data[i].date%></td>
                     <td><a href="/memo/<%=data[i].id%>"><%=data[i].title%></a></td>
                     <td><form action="/memo/<%=data[i].id%>?_method=DELETE" method="POST">
-                        <input class="submit" type="submit" value="Delete">
+                        
+                        <i class='bx bx-trash'><button class="submit" type="submit" ></button></i>
                         </form>
                     </td>
-                    <td><a class="button edit" href="/memo/<%=data[i].id%>/edit"><button>Edit</button></a></td>
+                    <td><a class="button edit" href="/memo/<%=data[i].id%>/edit"><i class='bx bx-edit-alt' ></i></a></td>
                 </tr>
             <%}%>
         </table>

@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
@@ -10,18 +11,18 @@
     <div class="header">
         <h1>Edit Page</h1>
         <div class="buttons">
-            <a href='/memo'><button class="button-primary">Home</button></a>
-            <a href='/memo/new'><button>Add New Item</button></a>
+            <a href='/memo'><button class="button-primary"><i class='bx bx-home'></i></button></a>
+            <a href='/memo/new'><button><i class='bx bx-plus-circle'></i></button></a>
         </div>
     </div>
     <form action="/memo/<%=data.id%>?_method=PUT" method="POST">
         <label for="date">Date:</label>
         <input type="text" name="date" id="date" value="<%=data.date%>"/><br/>
-        <label for="name">Date:</label>
+        <label for="name">Title:</label>
         <input type="text" name="title" id="name" value="<%=data.title%>"/><br/>
         <label for="text">Content:</label>
-        <textarea id="text" name="text" rows="10" cols="0" value="<%=data.text%>"></textarea>
-        <input class="button-primary" type="submit" value="Edit">
+        <textarea id="text" name="text" rows="10" cols="0"><%=data.text%></textarea>
+        <input class="button-primary" type="submit" value="Save">
     </form>
 </body>
 </html>
