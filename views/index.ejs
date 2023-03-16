@@ -1,23 +1,7 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Poppins&family=Rampart+One&family=Ubuntu&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script type="text/javascript" src="/app.js"></script>
-    <title>Document</title>
-</head>
+<%- include('./partials/head.ejs')%>
 <body>
-    <div class="img">
-        <img src="/src/Screenshot 2023-03-14 at 12.24.57 AM.png"/>
-    </div>
-    <div class="header">
-        <h1 id="main-title">Memo Pad</h1>
-        <h1 id="home-title">Home</h1>
+    <%- include('./partials/nav.ejs')%>
+        <h1 class="page-title">Home</h1>
     </div>
     <div class="content">
         <% for (let i=0; i<data.length; i++){ %>
@@ -27,16 +11,20 @@
                     <a class="button edit" href="/memo/<%=data[i].id%>/edit"><i class='index-icon bx bx-edit-alt' ></i></a>
                 </div>
                 <div class="box-content">
-                    <span id="date"><%=data[i].date%></span>
-                    <a id="title" href="/memo/<%=data[i].id%>"><%=data[i].title%></a>
+                    <span id="box-date"><%=data[i].date%></span>
+                    <a id="box-title" href="/memo/<%=data[i].id%>"><%=data[i].title%></a>
                 </div>
             </div>
             <div class="modal">
-                <h2>Are you sure you want to delete this memo?</h2>
-                <form action="/memo/<%=data[i].id%>?_method=DELETE" method="POST">
-                    <button class="submit" type="submit">Yes</button>
-                </form>
-                <button class="close-button">No</button>
+                <div id="modal-content">
+                    <h2>Are you sure you want to delete this memo?</h2>
+                    <div id="modal-button">
+                        <form action="/memo/<%=data[i].id%>?_method=DELETE" method="POST">
+                            <button class="submit" type="submit">Yes</button>
+                        </form>
+                        <button class="close-button">No</button>
+                    </div>
+                </div>
             </div>
         <%}%>
         <div id="add">

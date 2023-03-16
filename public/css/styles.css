@@ -1,9 +1,11 @@
 body{
     font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(254, 247, 215)
 }
 .img{
+    margin-top: 0.5rem;
     width: 100%;
-    height: 38%;
+    height: 42%;
 }
 img{
     width:100%;
@@ -15,10 +17,43 @@ a{
     color: black
 }
 .modal{
-    display: none
+    width: 25rem;
+    height: 15rem;
+    background-color: rgb(254, 247, 215);
+    border: 5px solid white;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 15rem;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+}
+#modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+}
+#modal-content h2{
+    color: rgb(18, 120, 151);
+}
+#modal-button{
+    display: flex;
+    flex-direction: row;
+}
+.submit, .close-button{
+    width: 3.5rem;
+    height: 2.5rem;
+    margin: 0.5rem;
+    background-color: rgb(37, 161, 199);
+    color:white;
+    border: none;
+    border-radius: 10px;
 }
 .show-modal{
-    display:block
+    display: flex;
 }
 .content{
     display: flex;
@@ -26,12 +61,12 @@ a{
     justify-content: center;
 }
 .box, #add{
-    border: 4px solid rgb(237, 237, 128);
+    border: 4px solid rgb(255, 255, 255);
     border-radius: 15%;
     margin: 2rem;
     width: 16rem;
     height: 16rem;
-    background-color: rgb(203, 237, 203);
+    background-color:rgb(203, 237, 203);
 }
 .box-header{
     margin:0.8rem;
@@ -70,31 +105,41 @@ a{
     justify-content: center;
     align-items: center;
 }
-#main-title{
+.main-title{
     font-family: 'Rampart One', cursive;
     font-size: 5rem;
     margin: 0;
     position: absolute;
     top: 22%
 }
-#home-title{
+.page-title{
     font-family: 'Lobster Two', cursive;
     font-size: 4rem;
 }
-#date{
+#box-date{
     font-size: 1.35rem;
     margin-top: 1.2rem;
-    margin-bottom: 0.8rem;
-    color: white
+    margin-bottom: 1.2rem;
+    color: white;
 }
-#title{
+#box-title{
     color: rgb(18, 120, 151);
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     margin-bottom: 1.3rem;
     font-weight: bold;
+    font-family: 'Lobster Two', cursive;
+    text-align: center;
 }
 .index-icon{
     font-size: 1.3rem;
     margin-right: 0.7rem;
-    color:white
+    color:rgb(23, 137, 171)
+}
+.nav-icon{
+    margin: 0.5rem;
+    font-family: 'Rampart One', cursive;
+    font-weight: 700;
+}
+.nav i{
+    margin-right: 0.3rem
 }

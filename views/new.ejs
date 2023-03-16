@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
-</head>
+<%- include('./partials/head.ejs')%>
 <body>
-    <div>
-       <h1> Create New Memo</h1>
-       <a href='/memo'><button class="button-primary"><i class='bx bx-home'></i></button></a>
+    <%- include('./partials/nav.ejs')%>
+        <h1 class="page-title">Create New Memo</h1>
     </div>
     <form action="/memo" method="POST">
         <label for="date">Date:</label>
         <input type="text" name="date" id="date" placeholder="Ex: 3/10 (Fri)"/><br/>
-        <label for="name">Date:</label>
+        <label for="name">Title:</label>
         <input type="text" name="title" id="name" placeholder="Title of Memo"/><br/>
         <label for="text">Content:</label>
         <textarea id="text" name="text" rows="10" cols="0" placeholder="Enter text:"></textarea>
