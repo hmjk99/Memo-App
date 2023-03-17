@@ -1,22 +1,16 @@
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.querySelector(".modal");
-    const trigger = document.querySelector(".trigger");
-    const closeButton = document.querySelector(".close-button");
-
-    function toggleModal() {
-        modal.classList.toggle("show-modal");
-    }
-    function windowOnClick(event) {
-        if (event.target.closest(".modal")) {
-            toggleModal();
+$(()=>{
+    $(".trigger").on('click', ()=>{
+        $(".modal").addClass("show-modal");
+    });
+      
+    $(".close-button").on('click', ()=>{
+        $(".modal").removeClass("show-modal");
+    });
+      
+    $(document).click(function(event) {
+        if (!$(event.target).closest(".modal,.trigger").length) {
+            $("body").find(".modal").removeClass("show-modal");
         }
-    }
-
-    trigger.addEventListener("click", toggleModal);
-    closeButton.addEventListener("click", toggleModal);
-    window.addEventListener("click", windowOnClick);
-
-});
-
+    });
+})

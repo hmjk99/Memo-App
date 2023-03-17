@@ -3,7 +3,7 @@ body{
     background-color: rgb(254, 247, 215)
 }
 .img{
-    margin-top: 0.5rem;
+    margin-top: 2.5rem;
     width: 100%;
     height: 42%;
 }
@@ -110,11 +110,12 @@ a{
     font-size: 5rem;
     margin: 0;
     position: absolute;
-    top: 22%
+    top: 22%;
+    color: whitesmoke;
 }
 .page-title{
     font-family: 'Lobster Two', cursive;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 #box-date{
     font-size: 1.35rem;
@@ -142,4 +143,53 @@ a{
 }
 .nav i{
     margin-right: 0.3rem
+}
+.nav{
+    position: fixed;
+    top:0;
+    background-color: rgb(254, 247, 215);
+    width: 100%;
+    height: 2rem;
+    padding-top: 4px
+}
+.show-title{
+    color: rgb(130, 216, 130);
+}
+.show-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.show-text{
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 35rem;
+    height: 25rem;
+    background-color: rgb(203, 237, 203);
+    display: grid;
+    grid-template-rows: 22rem 3rem; 
+}
+.show-content p{
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 1.5rem;
+    line-height: 1.7;
+    display: grid;
+    place-items: center;
+}
+.show-edit{
+    display: grid;
+    grid-template-rows:3rem; 
+    justify-items:end;
+}
+.edit{
+    margin-top: 0.5rem;
+    margin-right:1.2rem; 
+    color:rgb(23, 137, 171)
+}
+.show-icon{
+    font-size: 1.3rem;
+    margin-right: 0.3rem;
+    color:rgb(23, 137, 171)
 }

@@ -2,9 +2,14 @@
 <body>
     <%- include('./partials/nav.ejs')%>
         <h1 class="page-title"><%=data.date%></h1>
-    <div>
-        <h1><%=data.title%></h1>
-        <p><%=data.text%></p>
+    <div class="show-content">
+        <h1 class="show-title"><%=data.title%></h1>
+        <div class="show-text">
+            <p><%=data.text%></p>
+            <div class="show-edit">
+                <a class="button edit" href="/memo/<%=data.id%>/edit"><i class='show-icon bx bx-edit-alt' ></i>Edit</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
