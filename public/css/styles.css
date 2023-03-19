@@ -153,7 +153,7 @@ a{
     padding-top: 4px
 }
 .show-title{
-    color: rgb(130, 216, 130);
+    color:rgb(23, 137, 171)
 }
 .show-content{
     display: flex;
@@ -192,4 +192,61 @@ a{
     font-size: 1.3rem;
     margin-right: 0.3rem;
     color:rgb(23, 137, 171)
+}
+.form-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display:grid;
+    grid-template-rows: 3rem 3rem 16rem 3rem;
+    grid-template-columns: 7rem 10rem 8rem;
+    grid-row-gap: 1.5rem;
+}
+label{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    color: rgb(23, 137, 171);
+    font-weight: 700;
+    justify-self: center;
+}
+input{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-left: 10px;
+}
+.date{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.title{
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+textarea{
+    resize: none;
+    padding: 10px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    line-height: 1.5;
+}
+
+input, textarea{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgb(23, 137, 171);
+}
+.submit-button{
+    background-color: rgb(203, 237, 203);
+    padding: 0;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    color: rgb(23, 137, 171);
+    font-weight: 700;
+    cursor: pointer;
+}
+.bx, button{
+    cursor: pointer;
 }

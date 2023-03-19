@@ -3,15 +3,17 @@
     <%- include('./partials/nav.ejs')%>
         <h1 class="page-title">Create New Memo</h1>
     </div>
-    <form action="/memo" method="POST">
-        <label for="date">Date:</label>
-        <input type="text" name="date" id="date" placeholder="Ex: 3/10 (Fri)"/><br/>
-        <label for="name">Title:</label>
-        <input type="text" name="title" id="name" placeholder="Title of Memo"/><br/>
-        <label for="text">Content:</label>
-        <textarea id="text" name="text" rows="10" cols="0" placeholder="Enter text:"></textarea>
-        <input class="button-primary" type="submit" value="Create Item"/>
-    </form>
+    <div class="form-content">
+        <form class="form" action="/memo" method="POST">
+            <label class="date" for="date">Date:</label>
+            <input class="date" type="text" name="date" id="date" placeholder="Ex: 3/10 (Fri)"/>
+            <label class="title" for="name">Title:</label>
+            <input class="title" type="text" name="title" id="name" placeholder="Title of Memo"/>
+            <label for="text">Memo:</label>
+            <textarea id="text" name="text" rows="10" cols="0" placeholder="Enter text:"></textarea>
+            <input class="submit-button" type="submit" value="Create Memo"/>
+        </form>
+    </div>
 </body>
 </html>
 

@@ -2,14 +2,17 @@
 <body>
     <%- include('./partials/nav.ejs')%>
         <h1 class="page-title">Edit Memo</h1>
-    <form action="/memo/<%=data.id%>?_method=PUT" method="POST">
-        <label for="date">Date:</label>
-        <input type="text" name="date" id="date" value="<%=data.date%>"/><br/>
-        <label for="name">Title:</label>
-        <input type="text" name="title" id="name" value="<%=data.title%>"/><br/>
-        <label for="text">Content:</label>
-        <textarea id="text" name="text" rows="10" cols="0"><%=data.text%></textarea>
-        <input class="button-primary" type="submit" value="Save">
-    </form>
+    </div>
+    <div class="form-content">
+        <form class="form" action="/memo/<%=data.id%>?_method=PUT" method="POST">
+            <label class="date" for="date">Date:</label>
+            <input class="date" type="text" name="date" id="date" value="<%=data.date%>"/>
+            <label class="title" for="title">Title:</label>
+            <input class="title" type="text" name="title" id="title" value="<%=data.title%>"/>
+            <label for="text">Memo:</label>
+            <textarea id="text" name="text" rows="10" cols="0"><%=data.text%></textarea>
+            <input class="submit-button" type="submit" value="Save">
+        </form>
+    </div>
 </body>
 </html>
