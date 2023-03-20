@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const Memo = require('./models/schema.js')
 
-
 const app = express()
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
@@ -36,7 +35,7 @@ app.get('/memo/:id', (req, res)=>{
 })
 
 
-// ============== requests ================
+// ============== request for memo ================
 app.post('/memo', (req, res)=>{
     Memo.create(req.body).then(()=>{
         res.redirect('/memo')
@@ -55,6 +54,8 @@ app.put('/memo/:id', (req, res)=>{
     })
 })
 
+
+//================= connection ================
 mongoose.connect('mongodb://localhost:27017/Memo').then(() => {
    console.log('conneciton with mongo established')
 })
