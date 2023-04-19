@@ -10,7 +10,7 @@ $(()=>{
       
     $(document).click(function(event) {
         if (!$(event.target).closest(".modal,.trigger").length) {
-            $("body").find(".modal").removeClass("show-modal");
+            $(".modal").removeClass("show-modal");
         }
     });
 })
