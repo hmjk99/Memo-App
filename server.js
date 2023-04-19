@@ -2,11 +2,12 @@ const express = require('express')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const Memo = require('./models/schema.js')
-
+const path = require('path');
 const app = express()
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: true}))
+app.set('views', path.join(__dirname, 'views'));
 
 // ============== index ================
 app.get('/memo', (req, res)=>{
