@@ -4,6 +4,11 @@ const methodOverride = require('method-override')
 const Memo = require('./models/schema.js')
 const path = require('path');
 const app = express()
+const db = mongoose.connection;
+require('dotenv').config()
+const MONGODB_URI = process.env.MONGODB_URI;
+const PORT = process.env.PORT
+
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: true}))
@@ -57,10 +62,8 @@ app.put('/memo/:id', (req, res)=>{
 
 
 //================= connection ================
-mongoose.connect('mongodb://localhost:27017/Memo').then(() => {
-   console.log('conneciton with mongo established')
-})
+mongoose.connect(MONGODB_URI)
 
-app.listen('3000', ()=>{
+app.listen(PORT, ()=>{
     console.log('listening....')
 })
